@@ -36,14 +36,14 @@ export default function Home( {session} ) {
 export async function getServerSideProps({req}) {
   const session = await getSession({req});
   
-  // if(session) {
-  //     return {
-  //         redirect: {
-  //             destination: '/recipes',
-  //             permanent: false,
-  //         }
-  //     }
-  // }
+  if(session) {
+      return {
+          redirect: {
+              destination: '/recipes',
+              permanent: false,
+          }
+      }
+  }
   
   return {
       props: {

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "server": "json-server -d 750 -w -p 3001 ./server.js"
   },
   "dependencies": {
     "@chakra-ui/core": "^0.8.0",
@@ -26,6 +27,7 @@
     "@types/react": "^17.0.19",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
+    "json-server": "^0.16.3",
     "typescript": "^4.4.2"
   }
 }
