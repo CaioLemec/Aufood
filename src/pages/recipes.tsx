@@ -7,8 +7,6 @@ import { SearchResults } from '../components/Recipes/SearchResults';
 import { MainText } from '../components/Recipes/MainText';
 import { JustBg } from '../components/Recipes/JustBg';
 import { AboutCard } from '../components/Recipes/AboutCard';
-import { GetStaticPaths } from 'next';
-import { api } from '../services/api';
 
 export default function Recipes({ session }) {
     const [recipeSearch, setRecipeSearch] = useState('');
@@ -24,7 +22,6 @@ export default function Recipes({ session }) {
         setRecipeResults(data);
     }
 
-
     return (
         <>
             <Flex margin="0 auto" w="100%" h="100%" maxW={1140} flexDirection="column">
@@ -36,7 +33,7 @@ export default function Recipes({ session }) {
                 flexDirection="column"
                 w="100%"
                 h="100%"
-                mt={150}
+                mt={100}
                 >
                     <MainText />
                     <Flex w="100%" h="100%" alignItems="center" justifyContent="center">
@@ -56,6 +53,7 @@ export default function Recipes({ session }) {
                                         _hover={{ bg: "gray.dark" }} 
                                         borderLeftRadius="0" 
                                         _focus={{border: "none"}}
+                                        onClick={handleSearch}
                                         >Search</Button>
                                     </InputGroup>
                                 </Stack>

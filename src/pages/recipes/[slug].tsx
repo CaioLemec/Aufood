@@ -1,7 +1,7 @@
 import { StarIcon } from "@chakra-ui/icons";
-import { Badge, Box, Button, Flex, Icon, Image } from "@chakra-ui/react";
+import { Badge, Box, Button, Collapse, Flex, Icon, Image, Spacer } from "@chakra-ui/react";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { BiTimer } from 'react-icons/bi'
+import { BiTimer, BiArrowBack } from 'react-icons/bi'
 import React from "react";
 import { api } from "../../services/api";
 import router from "next/dist/client/router";
@@ -21,9 +21,12 @@ interface recipesResultProps {
 }
 
 export default function Continent({ recipe }: recipesResultProps) {
+    const [show, setShow] = React.useState(false)
+    const handleToggle = () => setShow(!show)
+
     return (
-        <Flex bg="gray.light" w="100vw" h="100%">
-            <Flex flexDirection="column" maxW={1440} w="100%" h="100%" alignItems="center" justifyContent="center">
+        <Flex w="100%" h="100%">
+            <Flex flexDirection="column" maxW={1440} w="100%" h="100%" alignItems="center" justifyContent="center" margin="0 auto">
                 <Box m="8" maxW="xl" borderWidth="1px" borderRadius="lg" overflow="hidden">
                     <Image mb="4" src={recipe.imageUrl} alt={recipe.imageAlt} />
                     <Box p="6">
@@ -79,25 +82,47 @@ export default function Continent({ recipe }: recipesResultProps) {
                             fontSize="24"
                             marginTop="8"
                         >
-                            {recipe.recipe}
+                            <Collapse startingHeight={55} in={show}>
+                                {recipe.recipe}
+                            </Collapse>
                         </Box>
-                        <Button
-                        onClick={() => router.push('/recipes')} 
-                        fontSize="15"
-                        size="lg"
-                        mt="4"
-                        bg="red.primary"
-                        color="white"
-                        _hover={{ bg: "gray.dark" }}
-                        _active={{
-                            transform: "scale(0.90)",
-                        }}
-                        _focus={{
-                            border: "none",
-                        }}
-                    >
-                        Back
-                    </Button>
+                        <Flex>
+                            <Button
+                                onClick={() => router.push('/recipes')}
+                                fontSize="15"
+                                size="lg"
+                                mt="4"
+                                bg="red.primary"
+                                color="white"
+                                _hover={{ bg: "gray.dark" }}
+                                _active={{
+                                    transform: "scale(0.90)",
+                                }}
+                                _focus={{
+                                    border: "none",
+                                }}
+                            >
+                                <Icon as={BiArrowBack} fontSize="16" mr="2" color="purple.primary" />Back
+                            </Button>
+                            <Spacer />
+                            <Button
+                                onClick={handleToggle}
+                                fontSize="15"
+                                size="lg"
+                                mt="4"
+                                bg="red.primary"
+                                color="white"
+                                _hover={{ bg: "gray.dark" }}
+                                _active={{
+                                    transform: "scale(0.90)",
+                                }}
+                                _focus={{
+                                    border: "none",
+                                }}
+                            >
+                                Show {show ? "Less" : "More"}
+                            </Button>
+                        </Flex>
                     </Box>
                 </Box>
             </Flex>
