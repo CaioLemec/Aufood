@@ -1,4 +1,4 @@
-import { Button, Icon, Text, Avatar } from '@chakra-ui/react'
+import { Button, Icon, Text, Avatar, Box } from '@chakra-ui/react'
 import { RiGithubFill } from 'react-icons/ri'
 import { signIn, signOut, useSession } from 'next-auth/client'
 
@@ -7,7 +7,7 @@ export function SignInButton() {
     return session ?
         (
             <Button
-                leftIcon={<Avatar size="md" name={session.user.name} src={session.user.image} />}
+                rightIcon={<Avatar size="md" name={session.user.name} src={session.user.image} />}
                 fontSize="16"
                 size="lg"
                 bg="transparent"
@@ -15,7 +15,10 @@ export function SignInButton() {
                 _hover={{ opacity: "0.8" }}
                 onClick={() => signOut()}
             >
-            <Text ml="1" color="gray.medium"><Text color="red.primary" as="span">Logged as </Text>{session.user.name}</Text>
+            <Box textAlign="right">
+            <Text color="red.primary" fontWeight="bold" fontSize="18" letterSpacing="wide">{session.user.name}</Text>
+            <Text fontWeight="light" color="red.primary" fontSize="14">{session.user.email}</Text>
+            </Box>
             </Button>
         )
         :
