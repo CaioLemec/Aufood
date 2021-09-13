@@ -63,7 +63,7 @@ export default function Continent({ recipe }: recipesResultProps) {
                                 textTransform="uppercase"
                                 ml="8"
                             >
-                                <Icon mb="2" as={BiTimer} fontSize="20" color="purple.primary" /> &bull; {recipe.runTime}
+                                <Icon mb="2" as={BiTimer} fontSize="20" /> &bull; {recipe.runTime}
                             </Box>
                         </Box>
                         <Box
@@ -102,7 +102,7 @@ export default function Continent({ recipe }: recipesResultProps) {
                                     border: "none",
                                 }}
                             >
-                                <Icon as={BiArrowBack} fontSize="16" mr="2" color="purple.primary" />Back
+                                <Icon as={BiArrowBack} fontSize="16" mr="2" />Back
                             </Button>
                             <Spacer />
                             <Button

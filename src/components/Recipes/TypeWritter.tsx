@@ -5,16 +5,16 @@ export function TypeWritter() {
     return (
         <Typewriter
         onInit={(typewriter) => {
-            typewriter.typeString("Dog.")
+            typewriter.typeString("#Dog.")
                 .pauseFor(2000)
                 .deleteAll()
-            typewriter.typeString("Cat.")
+            typewriter.typeString("#Cat.")
                 .pauseFor(2000)
                 .deleteAll()
-            typewriter.typeString("Reptile.")
+            typewriter.typeString("#Reptile.")
                 .pauseFor(2000)
                 .deleteAll()
-            typewriter.typeString("Bird.")
+            typewriter.typeString("#Bird.")
                 .pauseFor(2000)
                 .deleteAll()
                 .start();

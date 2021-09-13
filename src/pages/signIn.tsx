@@ -1,4 +1,3 @@
-import react from 'react';
 import { providers, signIn, getSession } from 'next-auth/client';
 import { Button } from '@chakra-ui/react';
 

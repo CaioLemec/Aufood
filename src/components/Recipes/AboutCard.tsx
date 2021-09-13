@@ -5,7 +5,7 @@ import { IoIosArrowForward } from 'react-icons/io'
 
 export function AboutCard() {
     return (
-        <SimpleGrid mt="16" minChildWidth="400px" spacing="40px" pl="10" pr="10">
+        <SimpleGrid mt="8" minChildWidth="400px" spacing="40px" pl="10" pr="10">
 
             <Box
                 display="flex"

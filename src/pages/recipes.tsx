@@ -1,5 +1,5 @@
 import { getSession } from 'next-auth/client'
-import { Input, Button, Flex, Stack, InputGroup } from "@chakra-ui/react"
+import { Input, Button, Flex, Stack, InputGroup, Spacer, Text } from "@chakra-ui/react"
 import React, { useState } from "react";
 import { FormEvent } from 'toasted-notes/node_modules/@types/react';
 import { Header } from '../components/Header';
@@ -7,8 +7,10 @@ import { SearchResults } from '../components/Recipes/SearchResults';
 import { MainText } from '../components/Recipes/MainText';
 import { JustBg } from '../components/Recipes/JustBg';
 import { AboutCard } from '../components/Recipes/AboutCard';
+import { Footer } from '../components/Footer';
+import { Descriptions } from '../components/Recipes/Descriptions';
 
-export default function Recipes({ session }) {
+export default function Recipes() {
     const [recipeSearch, setRecipeSearch] = useState('');
     const [recipeResults, setRecipeResults] = useState([]);
 
@@ -24,7 +26,7 @@ export default function Recipes({ session }) {
 
     return (
         <>
-            <Flex margin="0 auto" w="100%" h="100%" maxW={1140} flexDirection="column">
+            <Flex mx="auto" w="100%" minHeight="100vh" maxW={1440} flexDirection="column">
                 <JustBg />
                 <Header />
                 <Flex 
@@ -42,20 +44,34 @@ export default function Recipes({ session }) {
                                 <Stack w={450}>
                                     <InputGroup>
                                         <Input
+                                            _focus={{
+                                                border: "2px",
+                                                borderColor: "red.primary",
+                                            }}
+                                            _hover={{
+                                                border: "2px",
+                                                borderColor: "red.primary",
+                                            }}
+                                            placeholder="best recipes"
                                             borderRightRadius="0"
                                             type="text"
+                                            border="1px"
+                                            borderColor="red.primary"
+                                            color="gray.medium"
+                                            fontWeight="bold"
                                             value={recipeSearch}
                                             onChange={e => setRecipeSearch(e.target.value)}
                                         />
                                         <Button 
                                         bg="red.primary" 
                                         color="white" 
-                                        _hover={{ bg: "gray.dark" }} 
+                                        _hover={{ bg: "#cc1825" }} 
                                         borderLeftRadius="0" 
                                         _focus={{border: "none"}}
                                         onClick={handleSearch}
                                         >Search</Button>
                                     </InputGroup>
+                                    <Descriptions />
                                 </Stack>
                             </Flex>
                         </form>
@@ -64,9 +80,12 @@ export default function Recipes({ session }) {
                 {recipeResults.length >= 1 ? (
                     <SearchResults results={recipeResults} />
                 ) : (
+                    <>
                     <AboutCard />
+                    </>
                 )}
-
+            <Spacer />
+            <Footer />
             </Flex>
         </>
     );
@@ -74,8 +93,6 @@ export default function Recipes({ session }) {
 
 export async function getServerSideProps({ req }) {
     const session = await getSession({ req });
-
-    console.log(session)
 
     if (!session) {
         return {
