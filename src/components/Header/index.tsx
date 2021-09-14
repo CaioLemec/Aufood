@@ -3,7 +3,6 @@ import React from "react";
 import { Logotype } from "./Logotype";
 import { Menu } from "./Menu";
 import { MobileMenu } from "./MobileMenu";
-import { SignInButton } from "./SignInButton";
 
 export function Header() {
     const isMobileVersion = useBreakpointValue({

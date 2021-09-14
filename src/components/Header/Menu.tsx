@@ -5,7 +5,7 @@ export function Menu() {
     return (
         <Flex justifyContent="center">
             <HStack ml="4">
-            <ActiveLink href="/recipes">
+                <ActiveLink href="/recipes">
                     <Button
                         type="submit"
                         size="sm"

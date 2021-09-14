@@ -15,10 +15,10 @@ export function SignInButton() {
                 _hover={{ opacity: "0.8" }}
                 onClick={() => signOut()}
             >
-            <Box textAlign="right">
-            <Text color="red.primary" fontWeight="bold" fontSize="18" letterSpacing="wide">{session.user.name}</Text>
-            <Text fontWeight="light" color="red.primary" fontSize="14">{session.user.email}</Text>
-            </Box>
+                <Box textAlign="right">
+                    <Text color="red.primary" fontWeight="bold" fontSize="18" letterSpacing="wide">{session.user.name}</Text>
+                    <Text fontWeight="light" color="red.primary" fontSize="14">{session.user.email}</Text>
+                </Box>
             </Button>
         )
         :

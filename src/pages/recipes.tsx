@@ -1,14 +1,14 @@
 import { getSession } from 'next-auth/client'
-import { Input, Button, Flex, Stack, InputGroup, Spacer, Text } from "@chakra-ui/react"
+import { Input, Button, Flex, Stack, InputGroup, Spacer } from "@chakra-ui/react"
 import React, { useState } from "react";
 import { FormEvent } from 'toasted-notes/node_modules/@types/react';
 import { Header } from '../components/Header';
 import { SearchResults } from '../components/Recipes/SearchResults';
 import { MainText } from '../components/Recipes/MainText';
-import { JustBg } from '../components/Recipes/JustBg';
 import { AboutCard } from '../components/Recipes/AboutCard';
 import { Footer } from '../components/Footer';
 import { Descriptions } from '../components/Recipes/Descriptions';
+import JustBg from '../components/Recipes/JustBg';
 
 export default function Recipes() {
     const [recipeSearch, setRecipeSearch] = useState('');
@@ -29,13 +29,13 @@ export default function Recipes() {
             <Flex mx="auto" w="100%" minHeight="100vh" maxW={1440} flexDirection="column">
                 <JustBg />
                 <Header />
-                <Flex 
-                justifyContent="center" 
-                alignSelf="center" 
-                flexDirection="column"
-                w="100%"
-                h="100%"
-                mt={100}
+                <Flex
+                    justifyContent="center"
+                    alignSelf="center"
+                    flexDirection="column"
+                    w="100%"
+                    h="100%"
+                    mt={100}
                 >
                     <MainText />
                     <Flex w="100%" h="100%" alignItems="center" justifyContent="center">
@@ -62,13 +62,13 @@ export default function Recipes() {
                                             value={recipeSearch}
                                             onChange={e => setRecipeSearch(e.target.value)}
                                         />
-                                        <Button 
-                                        bg="red.primary" 
-                                        color="white" 
-                                        _hover={{ bg: "#cc1825" }} 
-                                        borderLeftRadius="0" 
-                                        _focus={{border: "none"}}
-                                        onClick={handleSearch}
+                                        <Button
+                                            bg="red.primary"
+                                            color="white"
+                                            _hover={{ bg: "#cc1825" }}
+                                            borderLeftRadius="0"
+                                            _focus={{ border: "none" }}
+                                            onClick={handleSearch}
                                         >Search</Button>
                                     </InputGroup>
                                     <Descriptions />
@@ -81,11 +81,11 @@ export default function Recipes() {
                     <SearchResults results={recipeResults} />
                 ) : (
                     <>
-                    <AboutCard />
+                        <AboutCard />
                     </>
                 )}
-            <Spacer />
-            <Footer />
+                <Spacer />
+                <Footer />
             </Flex>
         </>
     );
@@ -93,7 +93,6 @@ export default function Recipes() {
 
 export async function getServerSideProps({ req }) {
     const session = await getSession({ req });
-
     if (!session) {
         return {
             redirect: {

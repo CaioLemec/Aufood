@@ -17,10 +17,10 @@ export function MobileMenu({ showMobileMenu = true }: MobileMenuProps) {
             <>
                 {showMobileMenu && (
                     <Button
-                    display="flex"
-                    onClick={() => signOut()}
-                    bg="transparent"
-                    _hover={{ background: "0.8" }}
+                        display="flex"
+                        onClick={() => signOut()}
+                        bg="transparent"
+                        _hover={{ background: "0.8" }}
                     >
                         <Icon as={FaSignOutAlt} fontSize="20" color="red.primary" />
                     </Button>

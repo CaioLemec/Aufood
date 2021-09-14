@@ -18,25 +18,25 @@ export function AboutCard() {
                 <Text ml="8" mt="8" fontSize="28" color="white" fontWeight="bold">About Us</Text>
                 <Spacer />
                 <Button
-                onClick={() => router.push(`/about`)}
-                zIndex="1"
-                fontSize="15"
-                ml="8"
-                w="40"
-                mb="4"
-                bg="#cc1825"
-                color="white"
-                _hover={{ transform: "scale(0.90)" }}
-                _active={{
-                    transform: "scale(0.90)",
-                }}
-                _focus={{
-                    border: "none",
-                }}
-            >
-                More Details   <Icon as={IoIosArrowForward} fontSize="16" ml="2" color="purple.primary" />
-            </Button>
-            <Image position="absolute" right="0" src="./images/About.png" alt="cute cat and dog" />
+                    onClick={() => router.push(`/about`)}
+                    zIndex="1"
+                    fontSize="15"
+                    ml="8"
+                    w="40"
+                    mb="4"
+                    bg="#cc1825"
+                    color="white"
+                    _hover={{ transform: "scale(0.90)" }}
+                    _active={{
+                        transform: "scale(0.90)",
+                    }}
+                    _focus={{
+                        border: "none",
+                    }}
+                >
+                    More Details   <Icon as={IoIosArrowForward} fontSize="16" ml="2" color="purple.primary" />
+                </Button>
+                <Image position="absolute" right="0" src="./images/About.png" alt="cute cat and dog" />
             </Box>
 
             <Box
@@ -50,25 +50,25 @@ export function AboutCard() {
                 <Text ml="8" mt="8" fontSize="28" color="white" fontWeight="bold">Contact Us</Text>
                 <Spacer />
                 <Button
-                onClick={() => router.push(`/contact`)}
-                zIndex="1"
-                fontSize="15"
-                ml="8"
-                w="40"
-                mb="4"
-                bg="#9EB53E"
-                color="white"
-                _hover={{ transform: "scale(0.90)" }}
-                _active={{
-                    transform: "scale(0.90)",
-                }}
-                _focus={{
-                    border: "none",
-                }}
-            >
-                More Details   <Icon as={IoIosArrowForward} fontSize="16" ml="2" color="purple.primary" />
-            </Button>
-            <Image position="absolute" right="0" src="./images/Contact.png" alt="cute cat and dog" />
+                    onClick={() => router.push(`/contact`)}
+                    zIndex="1"
+                    fontSize="15"
+                    ml="8"
+                    w="40"
+                    mb="4"
+                    bg="#9EB53E"
+                    color="white"
+                    _hover={{ transform: "scale(0.90)" }}
+                    _active={{
+                        transform: "scale(0.90)",
+                    }}
+                    _focus={{
+                        border: "none",
+                    }}
+                >
+                    More Details   <Icon as={IoIosArrowForward} fontSize="16" ml="2" color="purple.primary" />
+                </Button>
+                <Image position="absolute" right="0" src="./images/Contact.png" alt="cute cat and dog" />
             </Box>
 
         </SimpleGrid>

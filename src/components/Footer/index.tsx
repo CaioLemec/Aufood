@@ -11,13 +11,13 @@ export function Footer() {
                     <Text color="gray.dark" fontWeight="light">© Copyright 2021 - AuFood - Caio Lemec</Text>
                     <Spacer />
                     <a rel="noreferrer" target="_blank" href="https://api.whatsapp.com/send?phone=5521999999999&text=Hello, Caio! I Loved Aufood!">
-                        <Icon _hover={{ opacity: "0.8" }} _active={{transform: "scale(0.90)"}} as={AiOutlineWhatsApp} fontSize="30" ml="4" color="gray.dark" />
+                        <Icon _hover={{ opacity: "0.8" }} _active={{ transform: "scale(0.90)" }} as={AiOutlineWhatsApp} fontSize="30" ml="4" color="gray.dark" />
                     </a>
                     <a rel="noreferrer" target="_blank" href="https://github.com/CaioLemec">
-                        <Icon _hover={{ opacity: "0.8" }} _active={{transform: "scale(0.90)"}} as={AiOutlineGithub} fontSize="30" ml="4" color="gray.dark" />
+                        <Icon _hover={{ opacity: "0.8" }} _active={{ transform: "scale(0.90)" }} as={AiOutlineGithub} fontSize="30" ml="4" color="gray.dark" />
                     </a>
                     <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/caiolemec/">
-                        <Icon _hover={{ opacity: "0.8" }} _active={{transform: "scale(0.90)"}} as={AiOutlineLinkedin} fontSize="30" ml="4" color="gray.dark" />
+                        <Icon _hover={{ opacity: "0.8" }} _active={{ transform: "scale(0.90)" }} as={AiOutlineLinkedin} fontSize="30" ml="4" color="gray.dark" />
                     </a>
                 </Flex>
             </Flex>
