@@ -5,10 +5,11 @@ export function ContactInput() {
     const toast = useToast()
     return (
         <Flex>
-            <VStack>
+            <VStack w="100%">
                 <FormControl id="first-name">
                     <FormLabel color="gray.medium">First name</FormLabel>
                     <Input
+                        maxW={350}
                         placeholder="Name"
                         borderColor="red.primary"
                         _focus={{

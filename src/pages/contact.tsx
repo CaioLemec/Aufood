@@ -23,11 +23,11 @@ export default function Contact({ session }) {
         <Spacer />
           <Flex w="65%" h="65%" boxShadow="2xl" borderRadius={30} bg="rgba(255, 255, 255, 0.1)" >
             {!isMobileVersion && (
-              <Flex w="100%" h="100%" alignItems="center">
+              <Flex w="100%" h="100%" alignItems="center" justifyContent="center">
                 <Image maxH={200} src="images/cuteMainDog.png" alt="cute dog with aufood logotype" />
               </Flex>
             )}
-            <Flex w="100%" h="100%" align="center" justify="center" mx="2">
+            <Flex w="100%" h="100%" align="center" justifyContent="center" mx="2">
               <ContactInput />
             </Flex>
           </Flex>

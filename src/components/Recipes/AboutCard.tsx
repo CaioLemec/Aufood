@@ -1,4 +1,4 @@
-import { Box, Flex, SimpleGrid, Text, Button, Spacer, Icon, Image } from '@chakra-ui/react'
+import { Box, SimpleGrid, Text, Button, Spacer, Icon, Image } from '@chakra-ui/react'
 import router from 'next/dist/client/router';
 import React from 'react';
 import { IoIosArrowForward } from 'react-icons/io'

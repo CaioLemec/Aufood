@@ -4,7 +4,7 @@ import { ActiveLink } from "../ActiveLink";
 export function Menu() {
     return (
         <Flex justifyContent="center">
-            <HStack ml="8">
+            <HStack ml="4">
             <ActiveLink href="/recipes">
                     <Button
                         type="submit"
