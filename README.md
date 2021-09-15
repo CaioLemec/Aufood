@@ -19,6 +19,8 @@
 
 The purpose of creating <Strong>Aufood</Strong> is to challenge me and put knowledge in frontend into practice.
 
+I've tried to create a playful content that entertained people, it took some work, so <strong>I hope you like it</strong>.
+
 I'm one of those who believe that you only learn by doing, that's why I tried to use several features in this project.
 
 Aufood was designed and created without the help of more experienced developers. Some ideas, theme and inspiration I got from a delivery service in Brazil called [Ifood](https://www.ifood.com.br/).
