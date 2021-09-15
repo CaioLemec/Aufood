@@ -55,8 +55,6 @@ I was able to learn a lot about:
 <img src="./public/images/readme/mockup1.gif" width="auto"/>
 <img src="./public/images/readme/mockup.gif" width="auto"/>
 </p>
-<br>
-<br>
 <hr>
 
 ## :technologist: Technologies
@@ -68,8 +66,6 @@ I was able to learn a lot about:
 - [Swiper](https://swiperjs.com/)
 - [JSON Server](https://www.npmjs.com/package/json-server)
 - [TypeWriter](https://www.npmjs.com/package/typewriter-effect)
-
-<br>
 <hr>
 
 ## :octocat: Environment
