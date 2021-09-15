@@ -57,7 +57,7 @@ I was able to learn a lot about:
 </p>
 <hr>
 
-## :stuck_out_tongue_winking_eye: Some Fun Art
+## :stuck_out_tongue_winking_eye: Some fun arts
 
 <p align="center">
 <img src="./public/images/swiper-1.gif" width="30%"/>
