@@ -20,7 +20,7 @@ export function SearchResults({ results }: SearchResultsProps) {
         <SimpleGrid p="10" minChildWidth="200px" spacing="40px">
             {results.map(product => {
                 return (
-                    <ProductItem product={product} />
+                    <ProductItem key={product.id} product={product} />
                 );
             })}
         </SimpleGrid>
