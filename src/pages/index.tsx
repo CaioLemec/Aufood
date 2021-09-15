@@ -3,6 +3,7 @@ import React from 'react';
 import { Logotype } from '../components/Header/Logotype';
 import { SignInButton } from '../components/Header/SignInButton';
 import { getSession } from 'next-auth/client'
+import Head from 'next/head';
 
 export default function Home({ session }) {
   const isMobileVersion = useBreakpointValue({
@@ -11,6 +12,9 @@ export default function Home({ session }) {
   })
   return (
     <>
+      <Head>
+        <title>Aufood | Sign In</title>
+      </Head>
       <Flex flexDirection="column" w="100vw" h="100vh" align="center" justify="center">
         <Flex w="100%" h="100%"></Flex>
         <Flex w="100%" h="100%" bg="white"></Flex>

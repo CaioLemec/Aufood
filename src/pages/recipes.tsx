@@ -9,6 +9,7 @@ import { AboutCard } from '../components/Recipes/AboutCard';
 import { Footer } from '../components/Footer';
 import { Descriptions } from '../components/Recipes/Descriptions';
 import JustBg from '../components/Recipes/JustBg';
+import Head from 'next/head';
 
 export default function Recipes() {
     const [recipeSearch, setRecipeSearch] = useState('');
@@ -26,6 +27,9 @@ export default function Recipes() {
 
     return (
         <>
+            <Head>
+                <title>Aufood | Recipes</title>
+            </Head>
             <Flex mx="auto" w="100%" minHeight="100vh" maxW={1440} flexDirection="column">
                 <JustBg />
                 <Header />

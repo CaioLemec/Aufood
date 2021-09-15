@@ -1,5 +1,6 @@
 import { Flex, Spacer, useBreakpointValue, Image } from '@chakra-ui/react';
 import { getSession } from 'next-auth/client'
+import Head from 'next/head';
 import React from 'react';
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header'
@@ -14,6 +15,9 @@ export default function Contact({ session }) {
 
   return (
     <>
+      <Head>
+        <title>Aufood | Contact</title>
+      </Head>
       <Flex maxW={1440} m="0 auto" flexDirection="column" w="100%" h="100vh" align="center" justify="center">
         <JustBg />
         <Header />
