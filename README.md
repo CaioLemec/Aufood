@@ -57,6 +57,26 @@ I was able to learn a lot about:
 </p>
 <hr>
 
+## :stuck_out_tongue_winking_eye: Some Fun Art
+
+<p align="center">
+<img src="./public/images/swiper-1.gif" width="30%"/>
+<img src="./public/images/swiper-2.gif" width="30%"/>
+<img src="./public/images/swiper-3.gif" width="30%"/>
+</p>
+
+<p align="center">
+<img src="./public/images/food/dog/dog2.png" width="30%"/>
+<img src="./public/images/food/cat/cat2.png" width="30%"/>
+<img src="./public/images/food/bird/bird1.png" width="30%"/>
+</p>
+
+<p align="center">
+<img src="./public/images/food/rodent/rodent1.png" width="30%"/>
+<img src="./public/images/food/reptile/reptile2.png" width="30%"/>
+<img src="./public/images/food/fish/fish1.png" width="30%"/>
+</p>
+
 ## :technologist: Technologies
 
 - [React](https://pt-br.reactjs.org/)
