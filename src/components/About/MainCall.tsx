@@ -17,24 +17,3 @@ export function MainCall() {
         </Flex>
     );
 }
-
-// import { Button, Icon } from '@chakra-ui/react'
-// import router from 'next/dist/client/router';
-// import { IoIosArrowForward } from 'react-icons/io'
-
-{/* <Button
-onClick={() => router.push(`/recipes`)}
-fontSize="15"
-mt="8"
-bg="#cc1825"
-color="white"
-_hover={{ transform: "scale(0.90)" }}
-_active={{
-    transform: "scale(0.90)",
-}}
-_focus={{
-    border: "none",
-}}
->
-More Details   <Icon as={IoIosArrowForward} fontSize="16" ml="2" color="purple.primary" />
-</Button> */}

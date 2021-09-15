@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "server": "json-server -d 350 -w -p 3001 ./server.js"
+    "server": "json-server -w -p 3001 ./server.js"
   },
   "dependencies": {
     "@chakra-ui/core": "^0.8.0",

@@ -102,7 +102,5 @@ module.exports = () => {
             },
         ],
     }
-
     return data;
-
 }

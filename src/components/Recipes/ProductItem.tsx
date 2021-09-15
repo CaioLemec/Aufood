@@ -1,4 +1,5 @@
 import { Box, Image, Badge, Button } from "@chakra-ui/react";
+import { memo } from 'react';
 import { StarIcon } from '@chakra-ui/icons';
 import React from "react";
 import router from "next/dist/client/router";
@@ -16,7 +17,7 @@ interface ProductItemProps {
     }
 }
 
-export function ProductItem({ product }: ProductItemProps) {
+function ProductItemComponent({ product }: ProductItemProps) {
     return (
         <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
             <Image src={product.imageUrl} alt={product.imageAlt} />
@@ -76,3 +77,7 @@ export function ProductItem({ product }: ProductItemProps) {
         </Box>
     )
 }
+
+export const ProductItem = memo(ProductItemComponent, (prevProps, nextProps) => {
+    return Object.is(prevProps.product, nextProps.product)
+});

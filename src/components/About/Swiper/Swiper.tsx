@@ -11,15 +11,18 @@ import SwiperCore, {
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
-export default () => {
+export function Carousel() {
     return (
         <Flex w="100%" maxW={1440} mt="2" mb="2" mx="auto" alignItems="center" justifyContent="center">
             <Swiper pagination={true} className="mySwiper" >
                 <SwiperSlide>
-                    <Image zIndex="-1" position="relative" src="./images/swiper-1.gif" alt="funny dog with sun glasses" />
+                    <Image zIndex="-1" position="relative" src="./images/swiper-3.gif" alt="funny dog with sun glasses" />
                 </SwiperSlide>
                 <SwiperSlide>
                     <Image zIndex="-1" position="relative" src="./images/swiper-2.gif" alt="funny dog with sun glasses" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Image zIndex="-1" position="relative" src="./images/swiper-1.gif" alt="funny dog with sun glasses" />
                 </SwiperSlide>
             </Swiper>
         </Flex>
