@@ -23,7 +23,7 @@ I'm one of those who believe that you only learn by doing, that's why I tried to
 
 Aufood was designed and created without the help of more experienced developers. Some ideas, theme and inspiration I got from a delivery service in Brazil called [Ifood](https://www.ifood.com.br/).
 
-If you see something in my code that I can improve I would love to hear from you.I think every feedback is an opportunity to improve so I'm waiting for your PR or contact. 💌
+If you see something in my code that I can improve I would love to hear from you. I think every feedback is an opportunity to improve so I'm waiting for your PR or contact. 💌
 
 I was able to learn a lot about:
 
